@@ -14,6 +14,10 @@ document.getElementById('restart-game').addEventListener('click', restartGame);
 async function startGame() {
     const player1Name = document.getElementById('player1-name').value;
     const player2Name = document.getElementById('player2-name').value;
+    if (!player1Name || !player2Name) {
+        alert("Please enter both player names.");
+        return;
+    }
     players = [{ name: player1Name, score: 0 }, { name: player2Name, score: 0 }];
     document.getElementById('player-setup').style.display = 'none';
     document.getElementById('category-selection').style.display = 'block';
