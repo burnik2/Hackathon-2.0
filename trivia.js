@@ -47,7 +47,7 @@ async function fetchQuestions() {
 
        
         for (let difficulty of difficulties) {
-            const response = await fetch(`${API_URL}?category=${currentCategory}&difficulty=${difficulty}&limit=2`);
+            const response = await fetch(`${API_URL}?categories=${currentCategory}&difficulty=${difficulty}&limit=2`);
 
             // console.log(currentCategory);
             if (!response.ok) {
